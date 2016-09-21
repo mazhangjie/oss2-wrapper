@@ -69,9 +69,9 @@ class OSS2(object):
             self.logger.error(e)
 
 if '__name__' == '__main__':
-    LOGDIR = '/var/kdserver/log'
+    LOGDIR = '/var/log'
     logger = PwLogging(dir=LOGDIR)
-    logger.addRotatingFileHandler('ORMtest.log', level='debug', fmt='simple')
+    logger.addRotatingFileHandler('test.log', level='debug', fmt='simple')
 
     oss = OSS2(accesskeyid = '', accesskeysecret = '', endpoint= 'http://oss-cn-hangzhou.aliyuncs.com', bucket= '',logger=logger)
     oss.uploadFiles()
